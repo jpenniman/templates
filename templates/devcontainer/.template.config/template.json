@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "jpenniman",
+  "classifications": [ "Config" ],
+  "identity": "Tortis.Templates.Devcontainer.Dotnet",
+  "name": "Tortis Devcontainer config",
+  "shortName": "mycsdevcontainer",
+  "symbols": {
+    "ContainerName":{
+      "type": "derived",
+      "description": "The name of the devcontainer (name attribute in the json).",
+      "datatype": "text",
+      "valueSource": "name",
+      "valueTransform": "kebabCase",
+      "replaces": "mydevcontainer",
+      "defaultValue": "mydevcontainer"
+    }
+  }
+}

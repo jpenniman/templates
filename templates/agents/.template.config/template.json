@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "jpenniman",
+  "classifications": [ "Config" ],
+  "identity": "Tortis.Templates.Agents",
+  "name": "Tortis Agents config",
+  "shortName": "myagents"
+}

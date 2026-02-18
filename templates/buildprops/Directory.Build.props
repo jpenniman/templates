@@ -1,0 +1,7 @@
+<Project>
+  <PropertyGroup>
+    <Authors>jpenniman</Authors>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+</Project>
