@@ -5,7 +5,7 @@ RUN rm -f /etc/apt/sources.list.d/yarn.list && \
     apt-get update && \
     apt-get install -y --no-install-recommends software-properties-common && \
     add-apt-repository ppa:neovim-ppa/unstable && \
-    apt update && \
+    apt-get update && \
     apt-get install -y --no-install-recommends openssh-server openjdk-25-jre neovim fzf ripgrep npm python3-venv
 
 USER vscode
