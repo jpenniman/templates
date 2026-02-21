@@ -8,14 +8,17 @@
     "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
       // Jetbrains Rider requires the JRE and SSH for remote development
       "packages": "openssh-server,openjdk-25-jre"
-    }
+    },
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
   },
   "postCreateCommand": "curl -fsSL https://opencode.ai/install | bash",
   "customizations": {
     "vscode": {
       "extensions": [
         "ms-dotnettools.csdevkit",
-        "redhat.vscode-xml"
+        "redhat.vscode-xml",
+        "editorconfig.editorconfig",
+        "bierner.markdown-preview-github-styles"
       ]
     }
   }
