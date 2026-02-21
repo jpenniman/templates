@@ -1,4 +1,15 @@
 FROM mcr.microsoft.com/devcontainers/dotnet:10.0-noble
 
 # Tracking issue: https://github.com/devcontainers/images/issues/1752
-RUN rm -f /etc/apt/sources.list.d/yarn.list
+RUN rm -f /etc/apt/sources.list.d/yarn.list && \
+    apt-get update && \
+    apt-get install -y --no-install-recommends software-properties-common && \
+    add-apt-repository ppa:neovim-ppa/unstable && \
+    apt update && \
+    apt-get install -y --no-install-recommends openssh-server openjdk-25-jre neovim fzf ripgrep npm python3-venv
+
+USER vscode
+RUN git clone https://github.com/jpenniman/dotfiles-nvim.git /home/vscode/.config/nvim && \
+    dotnet tool install -g dotnet-format && \
+    dotnet tool install -g dotnet-outdated-tool && \
+    curl -fsSL https://opencode.ai/install | bash
