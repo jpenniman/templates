@@ -4,6 +4,10 @@
     "dockerfile": "dockerfile"
   },
   "runArgs": ["--network=develop"],
+  "mounts":[
+    { "source": "${localEnv:HOME}/.ssh", "target": "/home/vscode/.ssh", "type": "bind" },
+    { "source": "${localEnv:HOME}/.gitconfig", "target":"/home/vscode/.gitconfig", "type":"bind"}
+  ],
   "features":{
     "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
       // Jetbrains Rider requires the JRE and SSH for remote development
