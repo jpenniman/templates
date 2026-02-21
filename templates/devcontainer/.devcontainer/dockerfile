@@ -1,5 +1,9 @@
 FROM mcr.microsoft.com/devcontainers/dotnet:10.0-noble
 
+# Rider requires sshd and jdk
+# The Neovim setup from my dotfiles requires fzf, ripgrep, npm, python3-venv
+
+# When the yarn key expires the image is unstable. Since I don't use yarn, just remove it.
 # Tracking issue: https://github.com/devcontainers/images/issues/1752
 RUN rm -f /etc/apt/sources.list.d/yarn.list && \
     apt-get update && \
